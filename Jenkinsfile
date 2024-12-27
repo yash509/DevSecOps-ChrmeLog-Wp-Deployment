@@ -44,7 +44,7 @@ pipeline {
             }
         }
 
-	stage("Debug Vault Credentials") {
+	stage("Debugging HashiCorp Vault Credentials") {
             steps {
                 script {
                     echo "Verifying Vault Credentials Configuration..."
@@ -60,7 +60,7 @@ pipeline {
             }
         }
 
-        stage("Test Vault Connectivity and Login") {
+        stage("Testing Hashicorp Vault Connectivity and Login") {
             steps {
                 script {
                     withCredentials([
@@ -86,7 +86,7 @@ pipeline {
             }
         }
         
-        stage("Fetch Credentials from Vault") {
+        stage("Fetching Credentials from HashiCorp Vault") {
             steps {
                 script {
                     withCredentials([
